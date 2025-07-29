@@ -30,7 +30,8 @@ namespace TestingAPI.Controllers
             new(18, "Pidgeot", "Normal/Flying"),
             new(19, "Rattata", "Normal"),
             new(20, "Raticate", "Normal"),
-            new(21, "Spearow", "Normal/Flying")
+            new(21, "Spearow", "Normal/Flying"),
+            new(1, "Missingno", null)
         ];
 
         [HttpGet("list")]
@@ -53,5 +54,5 @@ namespace TestingAPI.Controllers
         }
     }
 
-    public sealed record Pokemon(int Id, string Name, string Type);
+    public sealed record Pokemon(int Id, string Name, string? Type);
 }
